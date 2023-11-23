@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace는 파일명과 일치시켜주는게 좋음, 근데 뭐든 쓸 수는 있음 -->
+<mapper namespace="test">
+
+	<!-- 
+		JDBC > SQL을 Java 파일에서 문자열로 관리 > "select ~~~"
+		MyBatis > SQL을 XML파일에서 관리
+	-->
+	<!-- DML...? -->
+	<!-- 
+	<select id=""></select>
+	<insert id=""></insert>
+	<update id=""></update>
+	<delete id=""></delete> 
+	-->
+	
+	<select id="time" resultType="String">
+		select sysdate from dual
+	</select>
+
+</mapper>
