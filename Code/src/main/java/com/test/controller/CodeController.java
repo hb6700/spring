@@ -40,9 +40,13 @@ public class CodeController {
 		//list.do?language=java
 		//list.do?language=java&language=css
 		
+		//System.out.println(language);
+		
 		List<CodeDTO> list = dao.list(language);
+		
 		model.addAttribute("list", list);
 		model.addAttribute("language", language);
+		
 		return "list";
 	}
 	

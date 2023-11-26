@@ -10,9 +10,10 @@
 	
 	<select id="list" resultType="com.test.domain.CodeDTO" parameterType="java.util.list">
 		<!-- java, css, js -->
+		
 		select seq, subject, regdate, language from tblCode 
-		where language = 'java' or language = 'css' or language = 'js' 
-		<if test="list" != null">
+		<!-- where language = 'java' or language = 'css' or language = 'js'  -->
+		<if test = "list != null">
 			<where>
 				<foreach collection="list" item="lang" separator="or">
 					language = #{lang}

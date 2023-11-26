@@ -39,7 +39,7 @@
 		padding-right: 2rem;
 	}
 	#filter input{
-		background-color: 
+		background-color: #FFF; 
 	}
 </style>
 </head>
@@ -71,7 +71,7 @@
 					<c:when test="${dto.language == 'css'}">
 						<c:set var="color" value="orange"/>
 					</c:when>
-					<c:when test="${dto.language == 'javascript'}">
+					<c:when test="${dto.language == 'js'}">
 						<c:set var="color" value="orange"/>
 					</c:when>
 					<c:otherwise>
@@ -85,13 +85,14 @@
 		</c:forEach>
 	</div>
 	<div>
-		<button type="button" class="add" onclick="/location.href='/code/add.do';"></button>
+		<button type="button" class="add" onclick="/location.href='/code/add.do';">add</button>
 	</div>
+	
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script>
 		$('#filter > input').click(function(){
 			let param = '';
-			if($(this).data('selected')==0){
+			if($(this).data('selected') == 0){
 				$(this).css('background-color', $(this).data('color'));
 				$(this).data('selected', '1');
 			}else{
@@ -105,6 +106,7 @@
 					param += 'language=' + $(item).data('langnage') + '&';
 				}
 			});
+			
 			//alert(param);
 			location.href='/code/list.do?'+param;
 		});

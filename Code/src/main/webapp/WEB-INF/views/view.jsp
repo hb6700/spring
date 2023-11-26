@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="https://me2.do/5BvBFJ57">
 <link rel="stylesheet" href="/code/resources/highlight/styles/github.min.css">
 <style>
-	table > tr:nth-chile(1) > th {
+	table tr:nth-chile(1) th {
 		width: 120px;
 	}
-	table > tr:nth-chile(1) > td {
+	table tr:nth-chile(1) td {
 		width: 263px;
 	}
 	#code {
@@ -39,8 +39,11 @@
 	</table>
 	
 	<pre id="code">
-		<code class="language-java">
+		<%-- <code class="language-java">
 			${dto.code}
+		</code> --%>
+		<code class="language-${dto.language}">
+			<c:out value="${dto.code}" />
 		</code>
 	</pre>
 	

@@ -39,7 +39,7 @@
 		</table>
 		<div>
 			<button type="submit" class="add">add</button>
-			<button type="submit" class="back" onclick="location.href='/code/list.do';"></button>
+			<button type="button" class="back" onclick="location.href='/code/list.do';"></button>
 		</div>
 	</form>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
