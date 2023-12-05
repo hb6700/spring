@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML문법은 무조건 태그가 하나 이상 있어야 함 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.mapper.TestMapper">
+	
+	<insert id="add" parameterType="com.test.domain.MemberDTO">
+		insert into tblMember(userid, userpw, username) values (#{userid}, #{userpw}, #{username})
+	</insert>
+	
+	<insert id="addAuth" parameterType="com.test.domain.AuthDTO">
+		insert into tblAuth(userid, auth) values (#{userid}, #{auth})
+	</insert>
+</mapper>
